@@ -10,35 +10,7 @@ jobs:
     runs-on: macos-latest
     
     steps:
-      - name: Kodu indir
-        uses: actions/checkout@v4
-
-      - name: Node.js kur
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18'
-
-      - name: Paketleri yukle
-        run: npm install
-
-      - name: iOS platformu ekle
-        run: npx cap add ios
-
-      - name: Sync et
-        run: npx cap sync ios
-
-      - name: IPA derle
-        run: |
-          cd ios/App
-          xcodebuild \
-            -workspace App.xcworkspace \
-            -scheme App \
-            -configuration Release \
-            -sdk iphoneos \
-            -archivePath $RUNNER_TEMP/App.xcarchive \
-            CODE_SIGNING_ALLOWED=NO \
-            archive
-
+      
       - name: IPA olustur
         run: |
           mkdir -p $RUNNER_TEMP/ipa/Payload
