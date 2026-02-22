@@ -2,7 +2,8 @@
   "name": "stokpanel",
   "version": "1.0.0",
   "description": "StokPanel - Envanter Yönetim Sistemi",
-  "scripts": {
+ "scripts": {
+    "build": "echo 'Building Web Assets...' && mkdir -p www", 
     "sync:android": "npx cap sync android",
     "sync:ios": "npx cap sync ios",
     "open:android": "npx cap open android",
