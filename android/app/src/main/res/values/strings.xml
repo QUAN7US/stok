@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">StokPanel</string>
+    <string name="title_activity_main">StokPanel</string>
+    <string name="package_name">com.bahce.stokpanel</string>
+    <string name="custom_url_scheme">com.bahce.stokpanel</string>
+</resources>
